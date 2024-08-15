@@ -7,14 +7,15 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+// import { user_AVTAR } from "../utils/constant";
+import {USER_AVTAR} from "../utils/constant"
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
-  const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState(null); 
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -41,7 +42,7 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value,
             photoURL:
-              "https://assets.leetcode.com/users/avatars/avatar_1701764465.png",
+              USER_AVTAR,
           })
             .then(() => {
               // Profile updated!
@@ -52,11 +53,9 @@ const Login = () => {
                   uid: uid,
                   email: email,
                   displayName: displayName,
-                  photoURL,
+                  photoURL:photoURL,
                 })
               );
-
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -83,8 +82,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("browse");
+          
 
           // ...
         })
