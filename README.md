@@ -20,7 +20,14 @@
 - Unsubscribed to the onauthStateChange callback
 - Add hardcoded value to the constant
 - Register TMDB API & create an app & get access token
-Get Data from TMDB now playing movies list
+- Get Data from TMDB now playing movies list API
+- Create movieSlice
+- Update Store with movies Data
+- Planning for MainContainer & Secandory Container
+- Fetch data for Trailer Video
+- Update Store with Trailer Video Data
+- Embedded The Youtube video and make it autoplay and mute
+- Tailwind Classes to make Main Container look awesome
 - Fetch From TMDB Movies
 
 # Features
