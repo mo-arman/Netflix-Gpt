@@ -13,6 +13,7 @@ const SecandoryContainer = () => {
       <MovieList title={"Popular"} movies={movies.popularMovies}/>
       <MovieList title={"Upcoming Movies"} movies={movies.NowPlayingMovies}/>
       <MovieList title={"Horror Movies"} movies={movies.NowPlayingMovies}/>
+      <MovieList title={"Top Rated"} movies={movies.NowPlayingMovies}/>
       </div>
     </div>
     )
